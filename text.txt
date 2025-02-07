@@ -1,0 +1,4 @@
+-----------mongoDB password
+th00ify7rgg1dXY4
+-----------connect to mongoDB
+mongodb+srv://authentication:th00ify7rgg1dXY4@node-authen.k0pcb.mongodb.net/
