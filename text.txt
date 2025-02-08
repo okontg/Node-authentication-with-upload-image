@@ -1,4 +1,10 @@
------------mongoDB password
+-----------Previous mongoDB password
 th00ify7rgg1dXY4
 -----------connect to mongoDB
 mongodb+srv://authentication:th00ify7rgg1dXY4@node-authen.k0pcb.mongodb.net/
+mongodb+srv://authentication:th00ify7rgg1dXY4@node-authen.k0pcb.mongodb.net/?retryWrites=true&w=majority&appName=node-authen
+
+-------------new password
+bjc5We8wMpBy9j3C
+-------------- new connection
+mongodb+srv://RegisterUser:bjc5We8wMpBy9j3C@cluster0.vlwce.mongodb.net/
