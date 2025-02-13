@@ -63,7 +63,7 @@ const loginUser = async(req, res)=>{
   try{
     const {username, password} = req.body;
 
-    //find if the current user exist i the database or not
+    //find if the current user exist is the database or not
     const user = await User.findOne({username});
 
     if(!user){
@@ -84,13 +84,16 @@ const loginUser = async(req, res)=>{
     }
     
     //create user token
-    const accessToken = jwt.sign({
-      userId : user._id,
-      username : user.username,
-      role : user.role,
-    }, process.env.JWT_SECRET_KEY, {
-      expiresIn : '15'
-    })
+    const accessToken = jwt.sign(
+      {
+        userId : user._id,
+        username : user.username,
+        role : user.role,
+      }, 
+      process.env.JWT_SECRET_KEY, {
+        expiresIn : '30s'
+      }
+    )
 
     res.status(200).json({
       success : true,
