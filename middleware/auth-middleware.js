@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 const authMiddleware = (req, res, next)=>{
   
   const authHeader = req.headers['authorization'];
-  console.log(authHeader);
 
   if (!authHeader || !authHeader.startsWith('Bearer ')) { // Check for Bearer format
     return res.status(401).json({
@@ -24,7 +23,7 @@ const authMiddleware = (req, res, next)=>{
   //decode this token
   try{
     const decodedTokenInfo = jwt.verify(token, process.env.JWT_SECRET_KEY);
-    console.log(decodedTokenInfo);
+    //console.log(decodedTokenInfo);
 
     req.userInfo = decodedTokenInfo;
     next();

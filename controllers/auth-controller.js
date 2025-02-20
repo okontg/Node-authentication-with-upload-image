@@ -91,7 +91,7 @@ const loginUser = async(req, res)=>{
         role : user.role,
       }, 
       process.env.JWT_SECRET_KEY, {
-        expiresIn : '30s'
+        expiresIn : '30m'
       }
     )
 
