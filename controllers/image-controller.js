@@ -45,7 +45,7 @@ const uploadImageController = async(req, res)=>{
 };
 
 //fetched all images
-/* const fetchImagesController = async()=>{
+const fetchImagesController = async(req, res)=>{
   try{
     const images = await Image.find({});
     if(images){
@@ -63,9 +63,9 @@ const uploadImageController = async(req, res)=>{
       message : 'Can not fetched images! Please try again.'
     });
   }
-} */
+}
 
 module.exports = {
   uploadImageController,
-  //fetchImagesController
+  fetchImagesController
 }
