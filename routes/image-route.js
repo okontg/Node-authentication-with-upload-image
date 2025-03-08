@@ -3,7 +3,7 @@ const authMiddleWare = require('../middleware/auth-middleware');
 const adminMiddleWare = require('../middleware/admin-middleware');
 const uploadMiddleware = require('../middleware/upload-midleware');
 const {uploadImageController, fetchImagesController, deleteImageController} = require('../controllers/image-controller'); 
-const authMiddleware = require('../middleware/auth-middleware');
+//const authMiddleware = require('../middleware/auth-middleware');
 
 const router = express.Router();
 
@@ -26,7 +26,7 @@ router.get('/get',
 // _id 67b7565024eb5976b8fee7f0
 //Delete iamge route
 router.delete('/:id', 
-  authMiddleware, 
+  authMiddleWare, 
   adminMiddleWare, 
   deleteImageController
 );
