@@ -49,10 +49,12 @@ const uploadImageController = async(req, res)=>{
 //fetched all images
 const fetchImagesController = async(req, res)=>{
   try{
+    //pagination
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 2;
     const skip = (page -1) * limit;
     
+    //sorting
     const sortBy = req.query.sortBy || 'CreatedAt';
     const sortOrder = req.query.sortOrder === 'asc' ? 1 : -1;
     const totalImages = await Image.countDocuments();
