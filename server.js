@@ -19,5 +19,5 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/image', uploadImageRoute);
 
 app.listen(PORT, ()=>{
-  console.log('Server is now listenning to port',PORT);
+  console.log('Server is now running on port',PORT);
 });
