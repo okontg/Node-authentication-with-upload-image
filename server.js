@@ -6,6 +6,7 @@ const homeRoutes = require('./routes/home-route')
 const adminRoutes = require('./routes/admin-route');
 const uploadImageRoute = require('./routes/image-route');
 
+//connect to mongoDB database
 connectToDB();
 
 const app = express();
